@@ -1,0 +1,19 @@
+{
+  "name": "devjobs",
+  "version": "1.0.0",
+  "description": "DevJobs portal using NodeJS, Handlebars and Mongoose",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index"
+  },
+  "keywords": [],
+  "author": "Max Zavaleta",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-handlebars": "^3.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
