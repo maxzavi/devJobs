@@ -2,7 +2,7 @@ const express = require('express')
 const exphbs = require('express-handlebars')
 
 const path = require('path')
-const { router } = require('./routes/index.js')
+const router  = require('./routes')
 
 const app = express()
 
@@ -19,6 +19,6 @@ app.set('view engine', 'handlebars');
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-app.use("/",router)
+app.use("/",router())
 
 app.listen(3000)

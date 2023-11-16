@@ -29,7 +29,7 @@ h2 {
 h3 {
     font-size: 2.8rem;
 }
-.contenedor {
+.container {
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -97,11 +97,11 @@ h3 {
     margin-bottom: 5rem;
 }
 
-.nombre-sitio {
+.site-name {
     display: flex;
     justify-content: space-between;
 }
-.nombre-sitio a {
+.site-name a {
     color: white;
     text-decoration: none;
 }
