@@ -6,7 +6,7 @@ Init project:
 nmp init -y
 ```
 
-# Express  and Handelbars
+## Express  and Handelbars
 
 Install dependencies:
 
@@ -14,7 +14,7 @@ Install dependencies:
 npm i express express-handlebars
 ```
 
-# Nodemon
+## Nodemon
 
 Add dependecy in development **nodemon**
 
@@ -22,7 +22,7 @@ Add dependecy in development **nodemon**
 npm i nodemon -D
 ```
 
-# App
+## App
 
 Create file **index.js** and add in **package.json** star command:
 
@@ -38,6 +38,31 @@ Execute in command line:
 npm start
 ```
 
-# Router
+## Router
 
 Create folder **router**
+
+## dotenv  mongoose shortid slug express-session cookie-parser
+
+```cmd
+npm i --save dotenv mongoose shortid slug express-session cookie-parser
+```
+
+set environment variable DATABASE:
+
+```properties
+DATABASE=mongodb+srv://root:root@cluster0.uqwwtky.mongodb.net/devjobs
+```
+
+## connect-mongo
+
+Use version 3:
+```cmd
+npm i connect-mongo@3
+```
+
+
+## Mongoose
+
+Info in https://mongoosejs.com/
+
