@@ -51,7 +51,11 @@ npm i --save dotenv mongoose shortid slug express-session cookie-parser
 set environment variable DATABASE:
 
 ```properties
-DATABASE=mongodb+srv://root:root@cluster0.uqwwtky.mongodb.net/devjobs
+DATABASE=mongodb+srv://root:********@cluster0.uqwwtky.mongodb.net/devjobs
+PORT=3000
+NODE_ENV=development
+SECRET=supersecretoo
+KEY=llavesecreta
 ```
 
 ## connect-mongo
