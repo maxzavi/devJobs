@@ -64,8 +64,6 @@ Use version 3:
 ```cmd
 npm i connect-mongo@3
 ```
-
-
 ## Mongoose
 
 Info in https://mongoosejs.com/
