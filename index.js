@@ -37,7 +37,6 @@ app.use(session({
     store: new MongoStore({ mongooseConnection: mongoose.connection })
 }))
 
-
 app.use("/",router())
 
 app.listen(process.env.PORT)
