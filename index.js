@@ -18,7 +18,8 @@ const app = express()
 // Enable view handlebars
 app.engine('handlebars', 
     exphbs({
-        defaultLayout: 'layout'
+        defaultLayout: 'layout',
+        helpers: require('./helpers/handlebars')
     })
 )
 

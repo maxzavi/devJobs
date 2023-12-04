@@ -68,3 +68,16 @@ npm i connect-mongo@3
 
 Info in https://mongoosejs.com/
 
+## Trix Editor
+
+Review link https://github.com/basecamp/trix
+
+```html
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.0/dist/trix.css">
+    <script type="text/javascript" src="https://unpkg.com/trix@2.0.0/dist/trix.umd.min.js"></script>
+```
+
+```html
+        <input id="x" type="hidden" name="content">
+        <trix-editor input="x"></trix-editor>
+```
