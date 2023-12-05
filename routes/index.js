@@ -6,5 +6,6 @@ const router = express.Router()
 module.exports = ()=>{
     router.get('/', homeController.showJobs)
     router.get('/vacancies/new', vacanciesController.formNew)
+    router.post('/vacancies/new', vacanciesController.addVacancie)
     return router
 }

@@ -81,3 +81,23 @@ Review link https://github.com/basecamp/trix
         <input id="x" type="hidden" name="content">
         <trix-editor input="x"></trix-editor>
 ```
+
+## Webpack
+
+```cmd
+npm i --save-dev @babel/core @babel/preset-env babel-loader webpack webpack-cli
+```
+
+```cmd
+npm i concurrently
+```
+
+Add in package.json scripts
+
+```json
+  "scripts": {
+    "dev": "nodemon index",
+    "watch" : "webpack --w --mode development",
+    "start": "concurrently \"npm run dev\" \"npm run watch\" "
+  },
+```
