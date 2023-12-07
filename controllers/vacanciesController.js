@@ -14,3 +14,15 @@ exports.addVacancie = async (req,res)=>{
     const newVacancie = await vacancie.save()
     res.redirect (`/vacancies/${newVacancie.url}`)
 } 
+
+//Show vacancie
+exports.showVacancie = async (req,res,next)=>{
+    //console.log(req.param.url);
+    const vacancie = await Vacancie.findOne({ url: req.params.url})
+    if(!vacancie) return next()
+    res.render('vacancie',{
+        vacancie,
+        pageName: vacancie.title,
+        bar:true
+    })
+}
