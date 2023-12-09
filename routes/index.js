@@ -9,5 +9,8 @@ module.exports = ()=>{
     router.post('/vacancies/new', vacanciesController.addVacancie)
     //Show vacancie
     router.get('/vacancies/:url',vacanciesController.showVacancie)
+    //Edit vacancie
+    router.get('/vacancies/edit/:url',vacanciesController.formEditVacancie)
+    router.post('/vacancies/edit/:url',vacanciesController.editVacancie)
     return router
 }

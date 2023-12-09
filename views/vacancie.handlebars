@@ -11,4 +11,25 @@
         <p class="etiqueta">Contrato</p>
         <p class="contrato">{{vacancie.contract}}</p>
     </div>
+    <div class="caja">
+        <p class="etiqueta">Salario</p>
+        <p class="contrato">$ {{vacancie.salary}}</p>
+    </div>
+</div>
+<div class="vacante-contenedor contenedor">
+    <main class="contenido">
+        <h2>Descripción del Puesto</h2>
+        <div class="vacante-descripcion">
+            {{{vacancie.description}}}
+        </div>
+        <a href="/vacancies/edit/{{vacancie.url}}" class="btn btn-azul editar-btn">Editar vacante</a>
+    </main>
+    <aside class="sidebar">
+        <h2>Conocimientos Deseados</h2>
+        <ul class="skills">
+            {{#each vacancie.skills}}
+            <li>{{this}}</li>
+            {{/each}}
+        </ul>
+    </aside>
 </div>

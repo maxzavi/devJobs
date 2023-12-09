@@ -17,7 +17,6 @@ exports.addVacancie = async (req,res)=>{
 
 //Show vacancie
 exports.showVacancie = async (req,res,next)=>{
-    //console.log(req.param.url);
     const vacancie = await Vacancie.findOne({ url: req.params.url})
     if(!vacancie) return next()
     res.render('vacancie',{
@@ -25,4 +24,27 @@ exports.showVacancie = async (req,res,next)=>{
         pageName: vacancie.title,
         bar:true
     })
+}
+
+exports.formEditVacancie = async (req,res, next)=>{
+    const vacancie = await Vacancie.findOne({ url: req.params.url})
+    if(!vacancie) return next()
+    res.render('vacancie-edit',{
+        vacancie,
+        pageName: `Edit ${vacancie.title}`,
+        bar:true
+    })
+}
+
+exports.editVacancie = async (req,res, next)=>{
+    const vacancieUpdate = req.body;
+    vacancieUpdate.skills = req.body.skills.split(',')
+    const vacancie = await Vacancie.findOneAndUpdate({url:req.params.url},
+        vacancieUpdate,
+        {
+            new:true,
+            runValidators:true
+        }
+    )
+    res.redirect(`/vacancies/${vacancie.url}`)
 }
