@@ -11,6 +11,7 @@ require('./config/db')
 
 const path = require('path')
 const router  = require('./routes')
+const passport = require('./config/passport')
 
 const cookieParser = require('cookie-parser')
 const session = require('express-session')
@@ -49,6 +50,10 @@ app.use(session({
     saveUninitialized:false,
     store: new MongoStore({ mongooseConnection: mongoose.connection })
 }))
+
+//Passport
+//app.use(passport.initialize())
+//app.use(passport.session())
 //Alerts and flash messages
 app.use(flash())
 

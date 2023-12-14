@@ -115,3 +115,9 @@ Connect-flash by show messages, and express-validator by validations
 ```cmd
 npm i --save connect-flash express-validator@5.3.0
 ```
+
+## Passport
+
+```cmd
+npm i --save passport passport-local
+```

@@ -37,4 +37,11 @@ usersSchema.post('save', function (error, doc, next){
         next(error)
     }
 })
+
+//Authenticate user
+usersSchema.methods={
+    comparePassword : function(password){
+        return bcrypt.compareSync(password, this.password)
+    }
+}
 module.exports = mongoose.model('Users', usersSchema)

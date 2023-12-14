@@ -2,6 +2,8 @@ const express = require('express')
 const homeController = require('../controllers/homeController.js')
 const vacanciesController = require('../controllers/vacanciesController.js')
 const usersController = require('../controllers/usersController.js')
+const authController = require('../controllers/authController.js')
+
 const router = express.Router()
 
 module.exports = ()=>{
@@ -19,5 +21,8 @@ module.exports = ()=>{
     router.post('/account-create', 
         usersController.validateRegister,
         usersController.createUser)
+    //Login
+    router.get('/login', usersController.formLogin)
+    router.post('/login', authController.authenticateUser)
     return router
 }

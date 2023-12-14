@@ -46,3 +46,9 @@ exports.validateRegister = async (req,res,next)=>{
     }
     next()
 }
+
+exports.formLogin = async (req,res,next)=>{
+    res.render('login',{
+        pageName: 'Iniciar sesión en devJobs'
+    })
+}
