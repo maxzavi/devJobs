@@ -101,3 +101,17 @@ Add in package.json scripts
     "start": "concurrently \"npm run dev\" \"npm run watch\" "
   },
 ```
+
+## Bcrypt
+
+```cmd
+npm i --save bcrypt
+```
+
+## Connect-flah & Express-validator
+
+Connect-flash by show messages, and express-validator by validations
+
+```cmd
+npm i --save connect-flash express-validator@5.3.0
+```

@@ -1,6 +1,7 @@
 const express = require('express')
 const homeController = require('../controllers/homeController.js')
 const vacanciesController = require('../controllers/vacanciesController.js')
+const usersController = require('../controllers/usersController.js')
 const router = express.Router()
 
 module.exports = ()=>{
@@ -12,5 +13,11 @@ module.exports = ()=>{
     //Edit vacancie
     router.get('/vacancies/edit/:url',vacanciesController.formEditVacancie)
     router.post('/vacancies/edit/:url',vacanciesController.editVacancie)
+
+    //Create account
+    router.get('/account-create', usersController.formCreateAccount)
+    router.post('/account-create', 
+        usersController.validateRegister,
+        usersController.createUser)
     return router
 }

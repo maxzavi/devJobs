@@ -3,6 +3,8 @@ const Handlebars = require('handlebars')
 
 const express = require('express')
 const exphbs = require('express-handlebars')
+const expressValidator = require('express-validator')
+const flash = require('connect-flash')
 
 require('dotenv').config()
 require('./config/db')
@@ -22,6 +24,7 @@ const app = express()
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))
 
+app.use(expressValidator())
 
 // Enable view handlebars
 app.engine('handlebars', 
@@ -46,6 +49,14 @@ app.use(session({
     saveUninitialized:false,
     store: new MongoStore({ mongooseConnection: mongoose.connection })
 }))
+//Alerts and flash messages
+app.use(flash())
+
+//Create midleware
+app.use((req,res,next) => {
+    res.locals.messages = req.flash()
+    next()
+})
 
 app.use("/",router())
 
